@@ -1,0 +1,45 @@
+<!--pages/test/test.wxml-->
+<!-- <text>pages/test/test.wxml</text> -->
+<text>测试</text>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="item.id" >
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<!-- <slider bindchange="intervalChange" show-value min="500" max="2000"/>
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> -->
+<!-- <view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-x style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red" class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tapL">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMoveL">click me to scroll</button>
+  </view>
+</view> -->
+
+<!-- <view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view  scroll-x class="scroll-view_H" scroll-left  style="width: 100%;float:left;" 
+  bindscrolltoupper="left" bindscrolltolower="right" bindscroll="scrollLeft" scroll-into-view="{{toView}}" scroll-left="{{scrollLeft}}"
+  >
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red" class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+    <view class="btn-area">
+    <button size="mini" bindtap="tapL">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMoveL">click me to scroll</button>
+  </view>
+</view> -->

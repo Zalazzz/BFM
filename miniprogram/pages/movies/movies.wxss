@@ -1,0 +1,237 @@
+/* pages/movies/movies.wxss */
+
+/* 电影背景图片,虚化效果 */
+
+.movies .detail-container {
+  /* 图片高度 */
+  height: 400rpx;
+  /* 模糊滤镜 */
+  filter: blur(40rpx);
+  /* 透明度 */
+  opacity: 0.9;
+}
+
+.movies  .detail-mask {
+  position: absolute; /*绝对定位*/
+  width: 100%; /*高度和宽度*/
+  height: 400rpx;
+  background: #333; /*深色背景*/
+  top: 0px;
+  left: 0px;
+  z-index: -1; /*显示在底层*/
+}
+
+.movies .detail-info {
+  position: absolute; /*定位*/
+  display: flex; /*弹性布局*/
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 400rpx; /*高度遮罩层一致*/
+  padding: 20rpx; /*内补丁*/
+}
+
+.movies .detail-img {
+  width: 280rpx; /*大图宽度*/
+  height: 90%; /*大图高度*/
+  margin-right: 24rpx; /*与右侧文字间距*/
+}
+
+.movies .detail {
+  flex-grow: 1; /*文字占满剩余空间*/
+  line-height: 60rpx; /*行高*/
+  color: #fff; /*文字颜色*/
+  font-size: 24rpx; /* 文字大小*/
+}
+
+.movies .detail-sc {
+  color: greenyellow; /*黄绿色评分样式*/
+  font-size: 36rpx; /*文字大小*/
+}
+
+.movies .detail-button {
+  display: flex;
+  color: #fff;
+  padding: 20rpx;
+}
+
+.movies .detail-button .detail-wanting {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  /* background-color: #fff; */
+  border: 2rpx solid #fff;
+  border-radius: 10rpx;
+  padding: 0rpx 50rpx;
+  margin-right: 30rpx;
+}
+
+.movies .desc{
+  /* height: 200rpx; */
+  padding: 10rpx;
+  margin-bottom: 50rpx;
+}
+
+.movies .dese-title{
+  font-size: 48rpx;
+  font-weight: bold;
+  padding: 10rpx;
+}
+.movies .desc-desc-font{
+  font-size: 32rpx;
+}
+
+.movies .desc-desc {
+  font-size: 32rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+}
+
+.movies .desc-toggle{
+  float: right;
+  color: #ccc;
+  font-size: 32rpx;
+  padding: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.movies .actors,.movies .prevue{
+  padding: 10rpx;
+  margin-bottom: 50rpx;
+}
+
+.movies  .actors-title,.movies .prevue-title,.movies .comment-title{
+  font-size: 48rpx;
+  font-weight: bold;
+  padding: 10rpx;
+}
+
+.movies .actors .showMoreMsg{
+  height: 430rpx;
+  border-radius: 20rpx;
+
+}
+
+.movies .actors .showMoreMsg .earchActors{
+  width: 30% !important;
+  height: 100% !important;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+  padding-right: 20rpx;
+}
+
+
+.movies .actors .showMoreMsg .earchActors .img{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.movies .actors .showMoreMsg .earchActors .actorsName{
+  font-size: 30rpx;
+}
+.movies .actors .showMoreMsg .earchActors .actorsRole{
+  font-size: 30rpx;
+  color: #bbb;
+}
+
+.movies .prevue-titleRight .prevueAll{
+  font-size: 32rpx;
+  font-weight: 100;
+}
+.movies  .prevue-titleRight{
+  float: right;
+  margin-top: -65rpx;
+  margin-right: 10rpx;
+}
+
+.movies .prevue .titleRightArrow{
+  margin-left: 10rpx;
+}
+
+.movies .prevue .showMoreMsg{
+  height: 300rpx;
+  border-radius: 20rpx;
+
+}
+
+.movies .prevue .showMoreMsg .earchPrevue{
+  width: 30% !important;
+  height: 100% !important;
+  border-radius: 10rpx;
+  padding-left: 5rpx;
+  padding-right: 20rpx;
+}
+
+
+.movies .prevue .showMoreMsg .earchPrevue .img{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.movies .comment-titleRight .commentAll{
+  font-size: 32rpx;
+  font-weight: 100;
+}
+.movies  .comment-titleRight{
+  float: right;
+  margin-top: -65rpx;
+  margin-right: 10rpx;
+}
+
+.movies .comment .titleRightArrow{
+  margin-left: 10rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

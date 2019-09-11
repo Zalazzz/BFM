@@ -1,0 +1,23 @@
+<!--pages/showMore/showMore.wxml-->
+<!-- <text>pages/showMore/showMore.wxml</text> -->
+<view class="showMore">
+  <!-- 电影 -->
+  <view class="earch" wx:for="{{list}}" wx:key="index" bindtap="gotoDetail" data-myid="{{item.id}}" wx:if="isShow[0]">
+    <image src="{{item.images.small}}" class="img"></image>
+    <view class="title">{{item.title}}</view>
+    <van-rate allow-half void-color="#eee" readonly value="{{item.rating.stars}}" bind:change="onChange" size="10" />
+    <text class="Score">{{item.rating.average}}</text>
+  </view>
+  <!-- 图书 -->
+  <view class="earch" wx:for="{{list}}" wx:key="index" wx:if="isShow[1]">
+    <image src="{{item.images.small}}" class="img"></image>
+    <view class="title">{{item.title}}</view>
+    <view style="font-size:25rpx;color:#d33a33;">{{item.price}}</view>
+  </view>
+  <!-- 音乐 -->
+  <view class="earch" wx:for="{{list}}" wx:key="index" wx:if="isShow[3]">
+    <image src="{{item.image}}" class="img"></image>
+    <view class="title">{{item.title}}</view>
+    <view style="font-size:24rpx;">{{item.attrs.singer[0]}}</view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+/* miniprogram/pages/comment.wxss */
+/* 分数 */
+.comment .van-rate{
+  padding: 10rpx 10rpx 20rpx 10rpx;
+  margin-left: 30%;
+}
+
+.comment .van-field__input{
+  /* height: 150px; */
+  min-height: 200px;
+  line-height: 20px;
+}
+
+/* 上传预览的图片 */
+.comment .preveImg{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.comment .comment-img {
+  width: 200rpx;/* 显示正方形的图片 */
+  height: 200rpx;
+  padding: 20rpx;
+}
+
+.comment .uploadImgButton{
+  border-radius: 20rpx;
+  padding:30% 0% 0% 75%;
+}
+
+.comment .submitButton{
+  border-radius: 20rpx;
+  clear: both;
+}

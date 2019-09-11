@@ -1,0 +1,169 @@
+/* pages/my/my.wxss */
+
+/* 顶部登录样式 */
+
+.my .buttonSytle {
+  height: 400rpx;
+  position: relative;
+  color: #fff;
+  background-color: #d33a33;
+}
+
+.my .buttonSytle .loginButtonView::after{
+  display: block;
+  content: '';
+
+}
+
+.my .buttonSytle .loginButton {
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 45rpx;
+  border: 1px solid #fff;
+  background: #fff;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+}
+
+.my .buttonSytle .logined {
+  width: 100%; 
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my .buttonSytle .logined .loginImg {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.my .buttonSytle .logined.loginUserName {
+  margin: 0 atuo;
+}
+
+.my .buttonSytle .isquit {
+  float: right;
+  margin:-10% 10rpx 0rpx 0rpx;
+  padding: 5rpx 10rpx;
+  border: 1rpx solid #fff;
+  border-radius: 5rpx;
+}
+
+.my .buttonSytle  .isquit .quitImg {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.my .buttonSytle  .isquit .quitText {
+  line-height: 48rpx;
+  vertical-align: 12rpx;
+  font-size: 30rpx;
+}
+
+/* 当用户未登录时，禁用状态 */
+.my .loginedClose{
+  width: 100%;
+}
+.my .loginedClose .loginedTitle{
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 10rpx;
+}
+.my .loginedClose .loginedLeft{
+  font: bolder 40rpx "宋体";
+  text-align: center;
+}
+
+.my .loginedClose .loginedRight{
+  margin-top: 12rpx;
+}
+
+.my .loginedClose .loginedRight .loginedAll{
+  font-size: 32rpx;
+  line-height: 48rpx;
+  vertical-align: 15rpx;
+  padding-right:15rpx; 
+}
+
+.my .loginedClose .loginedRight .loginedArrow{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.my .loginedClose .files,.my .loginedClose .books,.my .loginedClose .muisc
+{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 0rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #dddddd;
+}
+.my .loginedClose .books{
+  padding: 40rpx 0rpx;
+}
+
+.my .loginedClose .files .filesLeft,.my .loginedClose .files .fliesRight,.my .loginedClose .books .booksLeft,.my .loginedClose .books .booksRight,.my .loginedClose .muisc .muiscLeft,.my .loginedClose .muisc .muiscRight{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.my .loginedClose .files .filesLeft,.my .loginedClose .books .booksLeft,.my .loginedClose .muisc .muiscLeft{
+  padding: 0rpx 20rpx;
+}
+
+.my .loginedClose .files .filesAnalysis,.my .loginedClose .files .filesCount,.my .loginedClose .books .booksAnalysis,.my .loginedClose .books .booksCount,.my .loginedClose .muisc .muiscAnalysis,.my .loginedClose .muisc .muiscCount{
+  margin-left: 30rpx;
+}
+.my .loginedClose .files .filesCount .filesNumber,.my .loginedClose .files .filesCount .filesView,.my .loginedClose .books .booksCount .booksNumber,.my .loginedClose .books .booksCount .booksView,.my .loginedClose .muisc .muiscCount .muiscNumber,.my .loginedClose .muisc .muiscCount .muiscView{
+  color: #bababa;
+}
+
+.my .loginedClose .files .filesCount .filesNumber,.my .loginedClose .books .booksCount .booksNumber,.my .loginedClose .muisc .muiscCount .muiscNumber{
+  font-size: 50rpx;
+}
+
+.my .loginedClose .files .fliesRight .filesMsg,.my .loginedClose .books .booksRight .booksMsg,.my .loginedClose .muisc .muiscRight .muiscMsg{
+  margin-right: 30rpx;
+  color: #bbbbbb;
+  font-size: 32rpx;
+}
+
+
+.my .loginedClose .files .filesImg,.my .loginedClose .books .booksImg,.my .loginedClose .muisc .muiscImg{
+  width: 48rpx;
+  height: 48rpx;
+}
+
+
+
+.my .loginedClose .files  .filesStart,.my .loginedClose .books  .booksStart,.my .loginedClose .muisc  .muiscStart{
+  border: 1rpx solid #eeeeee;
+  border-radius: 20rpx;
+  background-color: #eeeeee;
+  padding: 10rpx;
+  margin-right: 5rpx;
+}
+
+.my .loginedClose .files  .filesArrow,.my .loginedClose .books  .booksArrow,.my .loginedClose .muisc .muiscArrow{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+
+/* 当用户登录时，启用状态 */
+.my .loginedOpen{
+
+}
+

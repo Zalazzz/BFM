@@ -1,0 +1,97 @@
+<!--pages/index/index.wxml-->
+<!-- <text>pages/index/index.wxml</text> -->
+<view class="index">
+  <!-- 搜索框 -->
+  <view class="search">
+    <image class="searchImg" src="../../images/search.png"></image>
+    <input class="searchInput" placeholder="搜索" />
+  </view>
+  <!-- 影院热映 -->
+  <view class="hotFiles">
+    <view class="title">
+      <text class="titleLeft">影院热映</text>
+      <view class="titleRight">
+        <text class="titleRightMore" bindtap="showMore" data-index="1">查看更多</text>
+        <image class="titleRightArrow" src="../../images/right.png"></image>
+      </view>
+    </view>
+    <!-- 可移动的容器 -->
+    <swiper class="showMoreMsg">
+      <view wx:for="{{list}}" wx:key="index" style="width:100rpx;" >
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchFile" bindtap="gotoDetail" data-myid="{{item.id}}">
+          <image src="{{item.images.small}}" class="img"></image>
+          <view class="title">{{item.title}}</view>
+          <van-rate allow-half void-color="#eee"  readonly value="{{item.rating.stars}}" bind:change="onChange" size="10" />
+          <text class="filesScore">{{item.rating.average}}</text>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- BFM热门 -->
+  <view class="hotFiles">
+    <view class="title">
+      <text class="titleLeft">BFM热映</text>
+      <view class="titleRight">
+        <text class="titleRightMore" bindtap="showMore" data-index="2">查看更多</text>
+        <image class="titleRightArrow" src="../../images/right.png"></image>
+      </view>
+    </view>
+    <!-- 可移动的容器 -->
+    <swiper class="showMoreMsg">
+      <view wx:for="{{newlist}}" wx:key="index" style="width:100rpx;">
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchFile" bindtap="gotoDetail" data-myid="{{item.id}}">
+          <image src="{{item.images.small}}" class="img"></image>
+          <view class="title">{{item.title}}</view>
+          <van-rate allow-half void-color="#eee" value="{{item.rating.stars}}" bind:change="onChange" size="10" />
+          <text class="filesScore">{{item.rating.average}}</text>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- 畅销图书 -->
+  <view class="hotFiles">
+    <view class="title">
+      <text class="titleLeft">畅销图书</text>
+      <view class="titleRight">
+        <text class="titleRightMore" bindtap="showMore" data-index="3">查看更多</text>
+        <image class="titleRightArrow" src="../../images/right.png"></image>
+      </view>
+    </view>
+    <!-- 可移动的容器 -->
+    <swiper class="showMoreMsg">
+      <view wx:for="{{bookslist}}" wx:key="index" style="width:100rpx;">
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchFile" bindtap="gotoDetail" data-myid="{{item.id}}">
+          <image src="{{item.image}}" class="img"></image>
+          <view class="title">{{item.title}}</view>
+          <!-- <van-rate value="{{score}}" bind:change="onChange" size="10" /> -->
+          <view style="font-size:25rpx;color:#d33a33;">{{item.price}}</view>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- 热门单曲榜 -->
+  <view class="hotFiles">
+    <view class="title">
+      <text class="titleLeft">热门单曲榜</text>
+      <view class="titleRight">
+        <text class="titleRightMore" bindtap="showMore" data-index="4">查看更多</text>
+        <image class="titleRightArrow" src="../../images/right.png"></image>
+      </view>
+    </view>
+    <!-- 可移动的容器 -->
+    <swiper class="showMoreMsg">
+      <view wx:for="{{musiclist}}" wx:key="index" style="width:100rpx;">
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchFile" bindtap="gotoDetail" data-myid="{{item.id}}">
+          <image src="{{item.image}}" class="img"></image>
+          <view class="title">{{item.title}}</view>
+          <!-- <van-rate value="{{score}}" bind:change="onChange" size="10" /> -->
+          <view style="font-size:24rpx;">{{item.attrs.singer[0]}}</view>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+</view>

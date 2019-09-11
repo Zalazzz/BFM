@@ -1,0 +1,20 @@
+/* pages/test/test.wxss */
+
+ .bc_green{
+  height: 200px;
+  background-color: green;
+}
+
+.bc_red{
+   height: 200px;
+  background-color: red;
+}
+
+.bc_yellow{
+   height: 200px;
+  background-color: yellow;
+}
+.bc_blue{
+   height: 200px;
+  background-color: blue;
+}

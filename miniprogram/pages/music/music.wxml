@@ -1,0 +1,77 @@
+<!--pages/music/music.wxml-->
+<!-- <text>pages/music/music.wxml</text> -->
+<view class="books">
+  <!-- 电影图片 -->
+  <view class="detail-container" style="background:url('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2566598269.webp') no-repeat top"></view>
+  <!-- 遮罩层 -->
+  <view class="detail-mask"></view>
+  <!-- 电影介绍 -->
+  <view class="detail-info">
+    <!-- 电影图片 -->
+    <image class="detail-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2566598269.webp"></image>
+    <!-- 电影详情 -->
+    <view class="detail">
+      <!-- 电影标题 -->
+      <view class="detail-title">
+        <text>徒手攀岩</text>
+      </view>
+      <!-- 电影类型 -->
+      <text>余华/作者出版社/出版时间：2018-8-1</text>
+      <view class="detail-button">
+        <view class="detail-wanting">
+          <text>想听</text>
+        </view>
+        <view class="detail-wanting">
+          <text>在听</text>
+        </view>
+        <view class="detail-wanting">
+          <text>听过</text>
+        </view>
+      </view>
+      <!-- details end-->
+
+    </view>
+  </view>
+  <!-- 电影简介 -->
+  <view class="desc">
+    <view class="dese-title">简介</view>
+    <view class="desc-desc">
+      亚历克斯·霍诺德从2009年就梦想着徒手攀登酋长岩，此后尝试了1000多次，而徒手攀登酋长岩是自己的 “终极目标”。为此，他准备了一年半的时间，借助绳索攀爬过近60次酋长岩。他表示，自己这样做并非为了进行预演，而是反复尝试不同的岩点，研究攻克最难的区域。纪录片拍下了约塞米蒂国家公园及酋长岩的壮丽景色及霍诺德登顶的历史时刻。除此之外，片中还回顾了他怎样处理极限目标带来的生命风险，以及他如何追求卓越完美，从而在无绳索保护的情况下保证万无一失
+    </view>
+    <view class="desc-toggle">展开</view>
+  </view>
+  <!-- 喜欢读这本书的人也喜欢 -->
+  <view class="musics">
+    <view class="musics-title">喜欢这张唱片的人也喜欢</view>
+        <swiper class="showMoreMsg">
+          <view wx:for="{{imgUrls}}" wx:key="item.id" style="width:100rpx;">
+            <!-- 必须要子容器 -->
+            <swiper-item class="earchMusics">
+              <image src="{{item.url}}" class="img"></image>
+              <view class="title">徒手攀岩</view>
+              <van-rate value="{{score}}" bind:change="onChange" size="10" />
+              <text class="musicsScore">9.0</text>
+            </swiper-item>
+          </view>
+        </swiper>
+  </view>
+  <!-- 短评 -->
+  <!-- <view class="comment">
+    <view class="comment-title">
+      <view class="comment-titleLeft">短评</view>
+      <view class="comment-titleRight">
+        <text class="commentAll">全部16561</text>
+        <image class="titleRightArrow" src="../../images/right.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+    </view>
+    <view class="comment-desc">
+    <view class="earchComment">
+    <view>
+      <image src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2567725848.webp"></image>
+    </view>
+      <view class="comment-desc">之前看过《狂暴巨兽》和《摩天营救》给出的评语总是“中规中矩的爆米花大片”，昨天看完这部《巨齿鲨》，我发现我错了。《巨齿鲨》这样的存在不知道如何挤进了暑期档，总之，用一个词来形容这部影片那就是“尴尬”。</view>
+    </view>
+    
+    </view>
+  </view> -->
+</view>

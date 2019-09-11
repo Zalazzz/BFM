@@ -1,0 +1,33 @@
+/* pages/showMore/showMore.wxss */
+.showMore {
+ 
+}
+.showMore .earch{
+  float: left;
+  width: 30% !important;
+  height: 100% !important;
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx 20rpx 5rpx;
+}
+
+
+.showMore .earch .img{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  padding: 5rpx 10rpx;
+}
+
+.showMore .earch .title{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 25rpx;
+}
+.showMore .earch .Score{
+  float: right;
+  margin-top: -40rpx;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+  color: #bbb;
+}

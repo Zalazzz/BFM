@@ -1,0 +1,107 @@
+<!--pages/my/my.wxml-->
+<!-- <text>pages/my/my.wxml</text> -->
+<view class="my">
+
+  <!-- 顶部登录 -->
+  <view class="buttonSytle" style="background:url('http://img4.imgtn.bdimg.com/it/u=2394148543,3889817443&fm=26&gp=0.jpg')">
+
+    <!--登录前 登录按钮 背景-->
+    <block wx:if="{{isLogin}}">
+      <button  class="loginButton" open-type="getUserInfo" bindgetuserinfo="getUser">一键登录</button>
+    </block>
+
+    <!-- 登录后  -->
+    <block wx:else>
+      <view>
+        <view class="logined">
+          <image class="loginImg" src="{{avatarUrl}}"></image>
+          <view class="loginUserName">{{nickName}}</view>
+        </view>
+        <view class="isquit">
+          <image class="quitImg" src='../../images/tuichu.png'></image>
+          <text class="quitText" bindtap="quite">退出</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 登录后启用的功能 -->
+  <view class="loginedClose">
+    <view class="loginedTitle">
+      <text class="loginedLeft">我的书影音</text>
+      <view class="loginedRight">
+        <text class="loginedAll">全部</text>
+        <image class="loginedArrow" src='../../images/zuojiantou.png'></image>
+      </view>
+    </view>
+    <!-- 观影分析 -->
+    <view class="files">
+      <view class="filesLeft">
+        <image src='../../images/dianyingActive.png' class="filesImg"></image>
+        <view class="filesText">
+          <view class="filesAnalysis">观影分析</view>
+          <view class="filesCount">
+            <text class="filesNumber">0 </text>
+            <text class="filesView">观看</text>
+          </view>
+        </view>
+      </view>
+      <view class="fliesRight">
+        <view class="filesMsg">
+          <view>标记10部影片</view>
+          <text>开启观影分析</text>
+        </view>
+        <view class="filesStart">立即开始</view>
+        <image class="filesArrow" src='../../images/zuojiantou.png'></image>
+      </view>
+
+
+    </view>
+    <!-- 读书分析 -->
+    <view class="books">
+      <view class="booksLeft">
+        <image src='../../images/shuActive.png' class="booksImg"></image>
+        <view class="booksText">
+          <view class="booksAnalysis">观影分析</view>
+          <view class="booksCount">
+            <text class="booksNumber">0 </text>
+            <text class="booksView">观看</text>
+          </view>
+        </view>
+      </view>
+      <view class="booksRight">
+        <view class="booksMsg">
+          <view>标记10部影片</view>
+          <text>开启观影分析</text>
+        </view>
+        <view class="booksStart">立即开始</view>
+        <image class="booksArrow" src='../../images/zuojiantou.png'></image>
+      </view>
+
+
+    </view>
+    <!-- 音乐分析 -->
+    <view class="muisc">
+      <view class="muiscLeft">
+        <image src='../../images/yinfuActive.png' class="muiscImg"></image>
+        <view class="muiscText">
+          <view class="muiscAnalysis">观影分析</view>
+          <view class="muiscCount">
+            <text class="muiscNumber">0 </text>
+            <text class="muiscView">观看</text>
+          </view>
+        </view>
+      </view>
+      <view class="muiscRight">
+        <view class="muiscMsg">
+          <view>标记10部影片</view>
+          <text>开启观影分析</text>
+        </view>
+        <view class="muiscStart">立即开始</view>
+        <image class="muiscArrow" src='../../images/zuojiantou.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+</view>

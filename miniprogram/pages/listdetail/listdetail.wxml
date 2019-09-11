@@ -1,0 +1,35 @@
+<!--pages/listdetail/listdetail.wxml-->
+<!-- <text>pages/listdetail/listdetail.wxml</text> -->
+<view class="listdetail">
+  <!-- 海报 -->
+  <view class="bgImg"  style="{{backgroundimg.style}}">
+    <text class="bgText">{{backgroundimg.title}}</text>
+  </view>
+  <!-- 题头 -->
+  <view class="topTitle">
+    <view class="leftTile">
+      <text class="seen">看过0部 / </text>
+      <text class="total">共10部</text>
+    </view>
+    <view class="rightTile">生成成就海报</view>
+  </view>
+  <!-- 每部电影 -->
+  <view class="earchmovie" wx:for="{{list}}" wx:key="{{index}}">
+    <view class="ranking" style="{{color[index].style}}">No.{{index+1}} </view>
+    <view class="mycontainer">
+        <image class="smImg" src="{{item.images.small}}" style="width:200rpx;height:300rpx;border-radius:20rpx;"></image>
+      <view class="middle">
+        <text class="middleTitle">{{item.title}}</text>
+        <van-rate allow-half void-color="#eee" readonly value="{{item.rating.stars}}" bind:change="onChange" size="10" />
+          <text class="Score">{{item.rating.average}}</text>
+        <view class="sort">{{item.genres[0]}} {{item.genres[1]}}/ {{item.directors[0].name}} / </view>
+        <view>{{item.casts[0].name}} {{item.casts[1].name}}</view>
+      </view>
+      <view class="right" bindtap="gotocomment" data-id="{{item.id}}" >
+        <image src="../../images/xingxing.png" style="width:40rpx;height:40rpx;margin-bottom:10rpx;"></image>
+        <view  style="text-align:center;margin-left:-10rpx;">看过</view>
+      </view>  
+    </view>
+    <view class="comment">{{item.rating.details[3]}}人评价</view>
+  </view>
+</view>

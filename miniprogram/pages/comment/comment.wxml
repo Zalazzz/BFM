@@ -1,0 +1,21 @@
+<!--miniprogram/pages/comment.wxml-->
+<!-- <text>miniprogram/pages/comment.wxml</text> -->
+<view class="comment">
+<view style="color:#ccc;font-size:35rpx;text-align:center;">点击星星可以评分哦</view>
+  <!-- 评价 打分（用户） -->
+  <van-rate value="{{ score }}" bind:change="onScoreChange" />
+  <!-- 评价 输入框（用户） -->
+  <van-field type="textarea" size="large" value="{{ content }}" placeholder="写一些观后感想..." border="{{ false }}" bind:change="onContentChange" />
+  <view>
+    <!-- 上传图片预览区域 -->
+  <view class="preveImg">
+    <image class="comment-img" wx:for="{{images}}" wx:key="index" src="{{item}}"></image>
+  </view>
+  <!-- 上传图片 -->
+  <van-button class="uploadImgButton" type="warning" bindtap="uploadImg">上传图片</van-button>
+  </view>
+  <!-- 提交评论按钮 -->
+  <view class="submitButton">
+    <van-button size="large" color="#d33a33" bindtap="submit">提交评论</van-button>
+  </view>
+</view>

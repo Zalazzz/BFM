@@ -1,0 +1,211 @@
+<!--pages/movies/movies.wxml-->
+<!-- <text>pages/movies/movies.wxml</text> -->
+<view class="movies">
+  <!-- 电影图片 -->
+  <view class="detail-container" style="background:url({{detail.images.large}}) no-repeat top"></view>
+  <!-- 遮罩层 -->
+  <view class="detail-mask"></view>
+  <!-- 电影介绍 -->
+  <view class="detail-info">
+    <!-- 电影图片 -->
+    <image class="detail-img" src="{{detail.images.large}}"></image>
+    <!-- 电影详情 -->
+    <view class="detail">
+      <!-- 电影标题 -->
+      <view class="detail-title">
+        <text>{{detail.title}}</text>
+        <!-- 电影年份 -->
+        <text>({{detail.year}})</text>
+        <!-- 电影评分 -->
+        <view class="detail-sc">{{detail.rating.average}}分</view>
+      </view>
+      <!-- 电影导演 -->
+      <view class="detail-directions">
+        <!-- 导演名字 -->
+        <text>{{detail.directors[0].name}}</text>
+        <!-- 年份 -->
+        <text>({{detail.year}})</text>
+      </view>
+      <!-- 电影类型 -->
+      <text>{{detail.genres[0]}}/{{detail.countries[0]}}/片长{{detail.durations[0]}}</text>
+      <view class="detail-button">
+        <view class="detail-wanting" bindtap="gotocomment">
+          <text>想看</text>
+        </view>
+        <view  bindtap="gotocomment" class="detail-wanting">
+          <text>看过</text>
+        </view>
+      </view>
+      <!-- details end-->
+
+    </view>
+  </view>
+  <!-- 电影简介 -->
+  <view class="desc">
+    <view class="dese-title">简介</view>
+    <view class="{{descDesc}}">
+      {{detail.summary}}
+    </view>
+    <view class="desc-toggle"bindtap="show" >展开</view>
+  </view>
+  <!-- 影人集 -->
+  <view class="actors">
+    <view class="actors-title">影人</view>
+    <swiper class="showMoreMsg">
+      <view wx:for="{{detail.casts}}" wx:key="index" style="width:100rpx;">
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchActors">
+          <image src="{{item.avatars.small}}" class="img"></image>
+          <view class="actorsName">{{item.name}}</view>
+          <text class="actorsRole">演员</text>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- 预告片/剧照 -->
+  <view class="prevue">
+    <view class="prevue-title">
+      <view class="prevue-titleLeft">预告片/剧照</view>
+      <view class="prevue-titleRight">
+        <text class="prevueAll">全部{{detail.photos_count}}</text>
+        <image class="titleRightArrow" src="../../images/right.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+    </view>
+    <!-- 滑块 -->
+    <swiper class="showMoreMsg">
+      <view wx:for="{{detail.photos}}" wx:key="index" style="width:100rpx;">
+        <!-- 必须要子容器 -->
+        <swiper-item class="earchPrevue">
+          <!-- <image src="{{item.url}}" class="img"></image> -->
+          <image src="{{item.cover}}" class="img"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <!-- 短评 -->
+  <view class="comment">
+    <view class="comment-title">
+      <view class="comment-titleLeft">短评</view>
+      <view class="comment-titleRight">
+        <text class="commentAll">全部{{detail.comments_count}}</text>
+        <image class="titleRightArrow" src="../../images/right.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+    </view>
+    <view class="comment-desc" style="padding:20rpx 10rpx;border-bottom:2rpx solid #ccc;border-radius:20rpx;" wx:for="{{detail.popular_comments}}" wx:key="index">
+      <view class="earchComment">
+        <view>
+          <image src="{{item.author.avatar}}" style="width:64rpx;height:64rpx;border-radius:50%;"></image>
+        </view>
+        <view style="flaot:left;margin-top:-70rpx;margin-left:80rpx;">
+        <text style="font-weight:bold;">{{item.author.name}}</text>
+        <text style="margin-left:20rpx;font-size:30rpx;">{{item.created_at}}</text>
+        </view>
+        <view class="comment-desc" style="padding:10rpx;margin-top:10rpx;font-size:32rpx;">{{item.content}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<!--pages/movies/movies.wxml-->
+<!-- <text>pages/movies/movies.wxml</text> -->
+<!-- <view class="movies">
+  电影图片
+  <view class="detail-container" style="background:url('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2566598269.webp') no-repeat top"></view>
+  遮罩层
+  <view class="detail-mask"></view>
+  电影介绍
+  <view class="detail-info">
+    电影图片
+    <image class="detail-img" src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2566598269.webp"></image>
+    电影详情
+    <view class="detail">
+      电影标题
+      <view class="detail-title">
+        <text>徒手攀岩</text>
+        电影年份
+        <text>(2018)</text>
+        电影评分
+        <view class="detail-sc">9.7分</view>
+      </view>
+      电影导演
+      <view class="detail-directions">
+        导演名字
+        <text>Free Solo</text>
+        年份
+        <text>(2018)</text>
+      </view>
+      电影类型
+      <text>记录片/美国/片长100分钟</text>
+      <view class="detail-button">
+        <view class="detail-wanting">
+          <text>想看</text>
+        </view>
+        <view class="detail-wanting">
+          <text>看过</text>
+        </view>
+      </view>
+      details end
+
+    </view>
+  </view>
+  电影简介
+  <view class="desc">
+    <view class="dese-title">简介</view>
+    <view class="desc-desc">
+      亚历克斯·霍诺德从2009年就梦想着徒手攀登酋长岩，此后尝试了1000多次，而徒手攀登酋长岩是自己的 “终极目标”。为此，他准备了一年半的时间，借助绳索攀爬过近60次酋长岩。他表示，自己这样做并非为了进行预演，而是反复尝试不同的岩点，研究攻克最难的区域。纪录片拍下了约塞米蒂国家公园及酋长岩的壮丽景色及霍诺德登顶的历史时刻。除此之外，片中还回顾了他怎样处理极限目标带来的生命风险，以及他如何追求卓越完美，从而在无绳索保护的情况下保证万无一失
+    </view>
+    <view class="desc-toggle">展开</view>
+  </view>
+  影人集
+  <view class="actors">
+    <view class="actors-title">影人</view>
+    <swiper class="showMoreMsg">
+      <view wx:for="{{imgUrls}}" wx:key="item.id" style="width:100rpx;">
+        必须要子容器
+        <swiper-item class="earchActors">
+          <image src="{{item.url}}" class="img"></image>
+          <view class="actorsName">金国威</view>
+          <text class="actorsRole">导演</text>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  预告片/剧照
+  <view class="prevue">
+    <view class="prevue-title">
+      <view class="prevue-titleLeft">预告片/剧照</view>
+      <view class="prevue-titleRight">
+        <text class="prevueAll">全部300</text>
+        <image class="titleRightArrow" src="../../images/right.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+    </view>
+    滑块
+    <swiper class="showMoreMsg">
+      <view wx:for="{{imgUrls}}" wx:key="item.id" style="width:100rpx;">
+        必须要子容器
+        <swiper-item class="earchPrevue">
+          <image src="{{item.url}}" class="img"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  短评
+  <view class="comment">
+    <view class="comment-title">
+      <view class="comment-titleLeft">短评</view>
+      <view class="comment-titleRight">
+        <text class="commentAll">全部16561</text>
+        <image class="titleRightArrow" src="../../images/right.png" style="height:32rpx;width:32rpx;"></image>
+      </view>
+    </view>
+    <view class="comment-desc">
+    <view class="earchComment">
+    <view>
+      <image src="https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2567725848.webp"></image>
+    </view>
+      <view class="comment-desc">之前看过《狂暴巨兽》和《摩天营救》给出的评语总是“中规中矩的爆米花大片”，昨天看完这部《巨齿鲨》，我发现我错了。《巨齿鲨》这样的存在不知道如何挤进了暑期档，总之，用一个词来形容这部影片那就是“尴尬”。</view>
+    </view>
+    
+    </view>
+  </view> 
+</view> -->

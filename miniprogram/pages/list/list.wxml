@@ -1,0 +1,65 @@
+<!--pages/list/list.wxml-->
+<!-- <text>pages/list/list.wxml</text> -->
+<!-- 榜单 -->
+<view class="list">
+  <!-- 大推荐榜单 -->
+  <view class="bgBrand" bindtap="gotomore" data-listid="1">
+    <view class="bgTitle" style="background-image:url('https://img3.doubanio.com/view/activity_page/raw/public/p3132.jpg')">
+      <text class="topTitle">BFM--Top250</text>
+      <view class="totalNumber">+135</view>
+    </view>
+  </view>
+  <view class="bgBrand" bindtap="gotomore" data-listid="2">
+    <view class="bgTitle" style="background-image:url('https://img3.doubanio.com/view/activity_page/raw/public/p3133.jpg')">
+      <text class="topTitle">一周口碑电影榜</text>
+      <view class="totalNumber">+10</view>
+    </view>
+  </view>
+  <view class="bgBrand" bindtap="gotomore" data-listid="3">
+    <view class="bgTitle" style="background-image:url('https://img1.doubanio.com/view/activity_page/raw/public/p3387.jpg')">
+      <text class="topTitle">北美热门电影榜</text>
+      <view class="totalNumber">+10</view>
+    </view>
+  </view>
+<!-- 小推荐榜单 -->
+<!-- top250 -->
+<view class="smBrand"   bindtap="gotomore" data-listid="1">
+  <view class="smTitle">
+    <image class="smImg" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p457760035.webp"></image>
+    <view class="recommend">
+      <view class="earchRecommend">
+        <text class="title">1. 肖申克的救赎</text>
+        <text class="socre">9.7分</text>
+      </view>
+      <view class="earchRecommend">
+        <text class="title">1. 霸王别姬</text>
+        <text class="socre">9.6分</text>
+      </view>
+      <view class="earchRecommend">
+        <text class="title">1. 阿甘正传</text>
+        <text class="socre">9.5分</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 热门榜 -->
+<view class="smBrand"  bindtap="gotomore" data-listid="2">
+  <view class="smTitle">
+    <image class="smImg" src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2567841004.webp"></image>
+    <view class="recommend">
+      <view class="earchRecommend">
+        <text class="title">1. 时间序列</text>
+        <text class="socre">9.2分</text>
+      </view>
+      <view class="earchRecommend">
+        <text class="title">2. 死屋</text>
+        <text class="socre">9.2分</text>
+      </view>
+      <view class="earchRecommend">
+        <text class="title">3. 汴京之围</text>
+        <text class="socre">8.5分</text>
+      </view>
+    </view>
+  </view>
+</view>
+</view>

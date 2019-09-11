@@ -1,0 +1,73 @@
+/* pages/list/list.wxss */
+.list{
+  position: relative;
+}
+.list .bgBrand{
+  width: 100%;
+  padding: 5rpx;
+  position: relative;
+}
+
+.list .bgBrand .bgTitle{
+  width: 100%;
+  height: 400rpx;
+  background-size: 98% 100%;
+  background-repeat: no-repeat;
+}
+
+.list .bgBrand .bgTitle .topTitle{
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  font-size: 40rpx;
+  font-weight: bolder;
+  color: #f8e6a7;
+}
+
+.list .bgBrand .bgTitle .totalNumber{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  font-size: 40rpx;
+  color: #eee;
+}
+.list .smBrand{
+  position: relative;
+  width: 100%;
+}
+
+.list .smBrand .smTitle{
+  width: 100%;
+  display: flex;
+  padding: 10rpx;
+}
+.list .smBrand .smTitle .smImg{
+  width:256rpx;
+  height:256rpx;
+  border-radius: 20rpx;
+}
+
+.list .smBrand .smTitle .recommend{
+  width: 57%;
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  border: 2rpx solid #cccccc;
+  border-left: none;
+  padding: 20rpx;
+  border-radius: 10rpx; 
+}
+
+.list .smBrand .smTitle .recommend .earchRecommend{
+  padding: 5rpx;
+}
+
+.list .smBrand .smTitle .recommend .earchRecommend .title{
+  font-size: 32rpx;
+}
+
+.list .smBrand .smTitle .recommend .earchRecommend .socre{
+  font-size: 28rpx;
+  color: #ffa347;
+  margin-left: 10rpx;
+}
